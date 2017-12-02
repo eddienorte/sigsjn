@@ -113,18 +113,18 @@
         function pop_Bairros_1(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Nome:</th>\
-                        <td>' + (feature.properties['Nome:'] !== null ? Autolinker.link(String(feature.properties['Nome:'])) : '') + '</td>\
+                        <th scope="row">Nome_</th>\
+                        <td>' + (feature.properties['Nome_'] !== null ? Autolinker.link(String(feature.properties['Nome_'])) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['imagem'] !== null ? Autolinker.link(String(feature.properties['imagem'])) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['imagem'] !== null ? '<img src="images/' + String(feature.properties['imagem']).replace(/[\\/:]/g, '_').trim() + '">' : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
         function style_Bairros_1_0(feature) {
-            switch(String(feature.properties['Nome:'])) {
+            switch(String(feature.properties['Nome_'])) {
                 case 'BRASILIA':
                     return {
                 pane: 'pane_Bairros_1',
@@ -135,7 +135,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fillOpacity: 1,
-                fillColor: 'rgba(232,91,58,1.0)',
+                fillColor: 'rgba(231,91,58,1.0)',
             }
                     break;
                 case 'CENTRO':
@@ -148,7 +148,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fillOpacity: 1,
-                fillColor: 'rgba(249,158,89,1.0)',
+                fillColor: 'rgba(248,157,89,1.0)',
             }
                     break;
                 case 'COMENDADOR CARLOS SANTOS':
@@ -161,7 +161,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fillOpacity: 1,
-                fillColor: 'rgba(254,201,128,1.0)',
+                fillColor: 'rgba(253,201,128,1.0)',
             }
                     break;
                 case 'GUARIDA':
@@ -174,7 +174,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fillOpacity: 1,
-                fillColor: 'rgba(255,237,170,1.0)',
+                fillColor: 'rgba(254,237,170,1.0)',
             }
                     break;
                 case 'JOAO LANDEL':
@@ -187,7 +187,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fillOpacity: 1,
-                fillColor: 'rgba(237,248,185,1.0)',
+                fillColor: 'rgba(236,247,185,1.0)',
             }
                     break;
                 case 'JOAO MAGALHAES':
@@ -200,7 +200,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fillOpacity: 1,
-                fillColor: 'rgba(199,233,173,1.0)',
+                fillColor: 'rgba(199,232,173,1.0)',
             }
                     break;
                 case 'TAMANDARE':
@@ -213,7 +213,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fillOpacity: 1,
-                fillColor: 'rgba(157,211,167,1.0)',
+                fillColor: 'rgba(156,211,166,1.0)',
             }
                     break;
                 case 'VENEZA':
@@ -226,7 +226,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fillOpacity: 1,
-                fillColor: 'rgba(100,171,176,1.0)',
+                fillColor: 'rgba(99,171,176,1.0)',
             }
                     break;
             }
@@ -392,7 +392,7 @@
                         <td>' + (feature.properties['Telefone:'] !== null ? Autolinker.link(String(feature.properties['Telefone:'])) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['imagem'] !== null ? Autolinker.link(String(feature.properties['imagem'])) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['imagem'] !== null ? '<img src="images/' + String(feature.properties['imagem']).replace(/[\\/:]/g, '_').trim() + '">' : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -733,7 +733,7 @@
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/charging_station.16.svg',
-            iconSize: [22.8, 22.8]
+            iconSize: [19.0, 19.0]
         }),
             }
         }
@@ -781,7 +781,7 @@
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/bank.16.svg',
-            iconSize: [22.8, 22.8]
+            iconSize: [19.0, 19.0]
         }),
             }
         }
